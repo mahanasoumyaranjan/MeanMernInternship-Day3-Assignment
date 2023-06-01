@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(238, 238, 238);
+    ;
+    background: rgb(23, 23, 30);
+    padding: 0.8rem;
+}
+
+.link-list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.list-item>a {
+    text-decoration: none;
+    color: rgb(238, 238, 238);
+}
+
+.list-item>a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 30px rgb(255, 255, 255);
+}
+
+.list-container {
+    width: 30%;
+}
+
+.logo {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    width: 2rem;
+    height: 2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.toggle-btn>span {
+    width: 100%;
+    height: 0.1rem;
+    background: rgb(238, 238, 238);
+}
+
+.banner {
+    width: 100%;
+    height: 700px;
+    background-image: url("homeimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    filter: brightness(85%) contrast(105%) saturate(95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text {
+    font-size: 3rem;
+    font-style: italic;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.item-list {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.item-list > h1{
+    font-style: italic;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.card {
+    width: 400px;
+    border: 0.5px solid rgb(147, 147, 147);
+    border-radius:1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+/*     box-shadow: 0 0 20px 10px rgba(85, 85, 85, 0.232); */
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 0 0 20px 10px rgba(56, 56, 56, 0.4);
+}
+
+.img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius:0%;
+    margin-bottom: 3px;
+    
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0%;
+    
+}
+
+
+.description{
+    margin: 10px;
+    opacity: 95;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toggle-visibility{
+    border : none;
+    padding: 10px;
+    color: white;
+    background-color: rgb(22, 94, 250);
+    border-radius: 2%;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 17px;
+}
+
+.toggle-visibility:hover{
+    background-color: rgb(2, 67, 207);
+}
+
+.hidden{
+    opacity: 0;
+}
+
+@media(max-width:720px) {
+    .navbar {
+        /* navbar items will align at start except the toggle button */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list-container {
+        /* hide the list container for now */
+        width: 100%;
+        display: none;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .link-list {
+        /* stack the link items and align them to the center */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list-item {
+        /* list items take up whole width */
+        width: 100%;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .toggle-btn {
+        display: flex;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+    }
+
+    .card{
+        margin-bottom: 2rem;
+    }
+}
+h3,p{
+    color: white;
+}
